@@ -1,0 +1,79 @@
+---
+import ArtistCard from './Card.astro';
+
+const artists = [
+  {
+    imageUrl: 'japan2.jpg',
+    name: 'Artist Name 1',
+    description: 'Short description about artist 1',
+  },
+  {
+    imageUrl: 'japan.jpg',
+    name: 'Artist Name 2',
+    description: 'Short description about artist 2',
+  },
+  {
+    imageUrl: 'japan3.jpg',
+    name: 'Artist Name 3',
+    description: 'Short description about artist 3',
+  },
+  {
+    imageUrl: 'japan2.jpg',
+    name: 'Artist Name 1',
+    description: 'Short description about artist 1',
+  },
+  {
+    imageUrl: 'japan.jpg',
+    name: 'Artist Name 2',
+    description: 'Short description about artist 2',
+  },
+  {
+    imageUrl: 'japan3.jpg',
+    name: 'Artist Name 3',
+    description: 'Short description about artist 3',
+  },
+  {
+    imageUrl: 'japan2.jpg',
+    name: 'Artist Name 1',
+    description: 'Short description about artist 1',
+  },
+  {
+    imageUrl: 'japan.jpg',
+    name: 'Artist Name 2',
+    description: 'Short description about artist 2',
+  },
+  {
+    imageUrl: 'japan3.jpg',
+    name: 'Artist Name 3',
+    description: 'Short description about artist 3',
+  },
+  {
+    imageUrl: 'japan2.jpg',
+    name: 'Artist Name 1',
+    description: 'Short description about artist 1',
+  },
+
+];
+---
+<div class="artist-card-container">
+  {artists.map(artist => (
+    <ArtistCard
+      imageUrl={artist.imageUrl}
+      name={artist.name}
+      description={artist.description}
+    />
+  ))}
+</div>
+<style>.artist-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+
+  flex-wrap: wrap; 
+  background-color: black;
+  
+  
+}
+
+</style>

@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+html {
+  background-color: black;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: white;
+  margin: 3.3rem;
+  font-size: 36px;
+}

@@ -1,0 +1,48 @@
+---
+const { imageUrl, name, description } = Astro.props;
+---
+<div class="artist-card">
+  <img src={imageUrl} alt={name} class="artist-image" />
+  <h2 class="artist-title">{name}</h2>
+  <p class="artist-description">{description}</p>
+</div>
+
+    
+    <style>
+.artist-card {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.artist-card:hover {
+  transform: scale(1.03);
+}
+
+.artist-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.artist-title {
+  font-size: 26px;
+  margin: 15px 0 10px;
+  color: #1DB954;
+}
+
+.artist-description {
+  font-size: 16px;
+  color: #b3b3b3;
+  padding: 0 20px 25px;
+}
+
+
+
+		
+	</style>
