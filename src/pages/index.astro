@@ -1,37 +1,31 @@
 ---
-import "../styles/styles.css"
+import "../styles/styles.css";
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
-import Button from "../components/Button.astro";
 import CardLayout from "../components/CardLayout.astro";
-import Footer from '../components/Footer.astro';
-
-
+import Footer from "../components/Footer.astro";
+import Sidebar from "../components/Sidebar.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Nav/> 
-		
-		
-	 
-		<main>
-			<h1>Artist 
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Nav />
 
-			</h1>
-		
-	<CardLayout/>
-	
+    <Sidebar />
 
-		</main>
-		 </div>
-		 <Footer/>
-	</body>
+    <main style="margin-left: 250px;"> <!-- Adjust margin-left to make space for the sidebar -->
+      <h1>Artist</h1>
+      <CardLayout />
+    </main>
+
+    <Footer >
+  </body>
 </html>
+

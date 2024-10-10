@@ -1,0 +1,110 @@
+---
+const navItems = [
+  { name: "Home", icon: "🏠" },
+  { name: "Search", icon: "🔍" },
+  { name: "Your Library", icon: "📚" },
+];
+
+const playlists = [
+  "Liked Songs",
+  "Discover Weekly",
+  "Daily Mix 1",
+  "Daily Mix 2",
+];
+---
+
+<style>
+  .sidebar {
+    height: 100vh;
+    width: 250px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .playlists {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .playlist-item {
+    padding: 8px 0;
+  }
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+  }
+
+  .user-name {
+    font-size: 14px;
+  }
+</style>
+
+<div class="sidebar">
+  <!-- Sidebar Logo -->
+  <div class="sidebar-logo">
+    <img src="logoGreen.png" alt="Logo" style="height: 30px;" />
+    Spotify
+  </div>
+
+  <!-- Navigation Items -->
+  <div class="nav-items">
+    {navItems.map(item => (
+      <div class="nav-item">
+        <span>{item.icon}</span>
+        <span>{item.name}</span>
+      </div>
+    ))}
+  </div>
+
+  <!-- Playlists Section -->
+  <div class="playlists">
+    <strong>Playlists</strong>
+    {playlists.map(playlist => (
+      <div class="playlist-item">{playlist}</div>
+    ))}
+  </div>
+
+  <!-- User Profile -->
+  <div class="user-profile">
+    <div class="user-avatar"></div>
+    <div class="user-name">User Name</div>
+  </div>
+</div>
